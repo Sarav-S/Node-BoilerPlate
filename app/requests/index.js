@@ -8,6 +8,8 @@ class File {
 }
 
 module.exports = {
-    File
+    File,
+    SignupRequest: require('./SignupRequest'),
+    LoginRequest: require('./LoginRequest')
 }
 

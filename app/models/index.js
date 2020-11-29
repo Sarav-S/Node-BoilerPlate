@@ -8,6 +8,7 @@ class File {
 }
 
 module.exports = {
-    File
+    File,
+    User: require('./User')
 }
 

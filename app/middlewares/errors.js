@@ -12,6 +12,9 @@ module.exports = (error, request, response, next) => {
     }
 
     log(error);
+    if (process.env.APP_ENV === "development") {
+        console.log(error);
+    }
 
     return response.error({ message: error.message });
 }

@@ -8,6 +8,7 @@ class File {
 }
 
 module.exports = {
-    File
+    File,
+    AuthController: require('./AuthController')
 }
 

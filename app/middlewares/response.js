@@ -12,8 +12,10 @@ module.exports = (req, res, next) => {
     };
 
     res.successWithHeaders = (item = {}) => {
+        const { token } = item;
+        delete item.token;
         res.status(200)
-            .header('x-auth-token', item.token)
+            .header('x-auth-token', token)
             .send({
                 status: flag.success,
                 data: item
